@@ -30,13 +30,22 @@ presets pointing at an organized capture library, and they appear in the plugin 
 
 ## Setup
 
-```
-pip install fastmcp defusedxml
+Install (either way):
+
+```bash
+# with uv/uvx (recommended - no install step, cached)
+uvx wavemind-preset-mcp
+
+# or classic pip
+pip install wavemind-preset-mcp
 ```
 
 1. **Create the template**: open WaveMind NAM Universal II in any DAW, load anything, and
-   **save a preset**. Then copy that `.preset` file to this repo's folder as `plantilla.preset`
-   (or point `WAVEMIND_TEMPLATE` at it). The template provides the full parameter list.
+   **save a preset**. Then copy that `.preset` file to this repo's folder as
+   `wavemind_mcp/plantilla.preset` (or point `WAVEMIND_TEMPLATE` at it). The template
+   provides the full parameter list. (A placeholder template ships with the package — it
+   has the correct parameter ids but points at dummy paths, so a real one from your
+   plugin is strongly recommended.)
 2. **(Optional) Organize your library**: put your `.nam` captures and `.wav` IRs in folders and
    point `WAVEMIND_NAM_DIR` / `WAVEMIND_IR_DIR` at them (used by the search/inventory tools).
 
@@ -46,8 +55,8 @@ pip install fastmcp defusedxml
 {
   "mcpServers": {
     "wavemind": {
-      "command": "python",
-      "args": ["wavemind_mcp/server.py"],
+      "command": "uvx",
+      "args": ["wavemind-preset-mcp"],
       "env": {
         "WAVEMIND_NAM_DIR": "C:\\Music\\NAMs",
         "WAVEMIND_IR_DIR": "C:\\Music\\IRs"

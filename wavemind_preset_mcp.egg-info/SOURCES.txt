@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+wavemind_mcp/plantilla.preset
+wavemind_mcp/server.py
+wavemind_preset_mcp.egg-info/PKG-INFO
+wavemind_preset_mcp.egg-info/SOURCES.txt
+wavemind_preset_mcp.egg-info/dependency_links.txt
+wavemind_preset_mcp.egg-info/entry_points.txt
+wavemind_preset_mcp.egg-info/requires.txt
+wavemind_preset_mcp.egg-info/top_level.txt

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wavemind-preset-mcp"
+version = "1.0.0"
+description = "MCP server to create and manage WaveMind NAM Universal II presets programmatically"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["mcp", "nam", "neural-amp-modeler", "guitar", "presets", "wavemind"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = [
+    "fastmcp>=3.0",
+    "defusedxml>=0.7",
+]
+
+[project.scripts]
+wavemind-preset-mcp = "wavemind_mcp.server:main"
+
+[tool.setuptools]
+packages = ["wavemind_mcp"]
+
+[tool.setuptools.package-data]
+wavemind_mcp = ["*.preset"]

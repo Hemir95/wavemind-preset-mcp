@@ -24,7 +24,7 @@ from fastmcp import FastMCP
 APPDATA = os.environ.get("APPDATA", os.path.join(os.path.expanduser("~"), "AppData", "Roaming"))
 DIR_PRESETS = os.path.join(APPDATA, "WaveMind", "NAM Universal II", "Presets", "User")
 PLANTILLA = os.environ.get("WAVEMIND_TEMPLATE", os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "plantilla.preset"))
+    os.path.dirname(os.path.abspath(__file__)), "plantilla.preset"))
 DIR_BIBLIO_NAM = os.environ.get("WAVEMIND_NAM_DIR", os.path.join(os.path.expanduser("~"), "Music", "NAMs"))
 DIR_BIBLIO_IR = os.environ.get("WAVEMIND_IR_DIR", os.path.join(os.path.expanduser("~"), "Music", "IRs"))
 
@@ -256,5 +256,9 @@ def categorias_biblioteca() -> str:
     return "\n".join(lineas)
 
 
-if __name__ == "__main__":
+def main() -> None:
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
