@@ -101,6 +101,5 @@ Every generated preset gets, unless overridden:
 
 ## Disclaimer
 
-This is an independent community tool. It is not affiliated with or endorsed by WaveMind,
-Xfer Records, Tone3000, or any plugin vendor. "NAM" refers to the open Neural Amp Modeler
+This is an independent community tool. It is not affiliated with or endorsed by WaveMind, Tone3000, or any plugin vendor. "NAM" refers to the open Neural Amp Modeler
 format.
